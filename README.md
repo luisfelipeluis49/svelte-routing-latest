@@ -1,18 +1,27 @@
 [![npm][npm]][npm-url]
 
-# Svelte Routing
+# Svelte Routing Latest
 
-A declarative Svelte routing library with SSR support.
+A declarative Svelte routing library with SSR support forked from svelte-routing with support for latest Svelte versions
 
 [[CHANGELOG][changelog-url]]
 
 ## Install
 
 ```bash
-npm i -D svelte-routing
+npm i -D svelte-routing-latest
+```
+```bash
+yarn add -D svelte-routing-latest
+```
+```bash
+pnpm add -D svelte-routing-latest
+```
+```bash
+deno add -D jsr:@liep/svelte-routing-latest
 ```
 
-## Usage
+## Usage (Svelte ^5.0)
 
 ```html
 <!-- App.svelte -->
@@ -42,11 +51,16 @@ npm i -D svelte-routing
 
 ```javascript
 // main.js
-import App from "./App.svelte";
+import { mount } from 'svelte';
+import App from './App.svelte'
 
-const app = new App({
-    target: document.getElementById("app"),
-});
+const app =
+    mount(
+        App,
+        { target: document.getElementById("app") }
+        );
+
+export default app;
 ```
 
 ## API
@@ -229,6 +243,6 @@ Unless you explicitly state otherwise, any contribution intentionally submitted
 for this project by you, shall be licensed as **MIT**, without any additional
 terms or conditions. [**Code of Conduct**](CODE_OF_CONDUCT.md).
 
-[npm]: https://img.shields.io/npm/v/svelte-routing.svg
-[npm-url]: https://npmjs.com/package/svelte-routing
-[changelog-url]: https://github.com/EmilTholin/svelte-routing/blob/master/CHANGELOG.md
+[npm]: https://img.shields.io/npm/v/svelte-routing-latest.svg
+[npm-url]: https://npmjs.com/package/svelte-routing-latest
+[changelog-url]: https://github.com/EmilTholin/svelte-routing-latest/blob/master/CHANGELOG.md
